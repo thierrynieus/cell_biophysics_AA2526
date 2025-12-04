@@ -1,0 +1,11 @@
+/home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/github
+Mod files: "./leak.mod"
+
+Creating 'x86_64' directory for .o files.
+
+ -> [32mCompiling[0m mod_func.cpp
+ -> [32mNMODL[0m ../leak.mod
+ -> [32mCompiling[0m leak.c
+ => [32mLINKING[0m shared library ./libnrnmech.so
+ => [32mLINKING[0m executable ./special LDFLAGS are:    -pthread
+Successfully created x86_64/special
