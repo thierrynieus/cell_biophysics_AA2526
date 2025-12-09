@@ -170,7 +170,7 @@ extern void _cvode_abstol( Symbol**, double*, int);
 #endif
   hoc_register_prop_size(_mechtype, 5, 0);
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 leak /home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/github/leak.mod\n");
+ 	ivoc_help("help ?1 leak /home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/cell_biophysics_AA2526/leak.mod\n");
  hoc_register_limits(_mechtype, _hoc_parm_limits);
  hoc_register_units(_mechtype, _hoc_parm_units);
  }
@@ -298,7 +298,7 @@ _first = 0;
 #endif
 
 #if NMODL_TEXT
-static const char* nmodl_filename = "/home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/github/leak.mod";
+static const char* nmodl_filename = "/home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/cell_biophysics_AA2526/leak.mod";
 static const char* nmodl_file_text = 
   "TITLE leak current\n"
   "\n"

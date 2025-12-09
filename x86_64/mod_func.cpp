@@ -7,14 +7,20 @@ extern "C" {
 #endif
 
 extern void _leak_reg(void);
+extern void _potassium_reg(void);
+extern void _sodium_reg(void);
 
 void modl_reg() {
   if (!nrn_nobanner_) if (nrnmpi_myid < 1) {
     fprintf(stderr, "Additional mechanisms from files\n");
     fprintf(stderr, " \"leak.mod\"");
+    fprintf(stderr, " \"potassium.mod\"");
+    fprintf(stderr, " \"sodium.mod\"");
     fprintf(stderr, "\n");
   }
   _leak_reg();
+  _potassium_reg();
+  _sodium_reg();
 }
 
 #if defined(__cplusplus)

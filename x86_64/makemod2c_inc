@@ -1,8 +1,24 @@
 ./leak.c: ../leak.mod
 	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
-	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "leak.mod" -o "/home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/github/x86_64")
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "leak.mod" -o "/home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/cell_biophysics_AA2526/x86_64")
 
 ./leak.o: ./leak.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./potassium.c: ../potassium.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "potassium.mod" -o "/home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/cell_biophysics_AA2526/x86_64")
+
+./potassium.o: ./potassium.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./sodium.c: ../sodium.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "sodium.mod" -o "/home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/cell_biophysics_AA2526/x86_64")
+
+./sodium.o: ./sodium.c
 	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
 	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
 
