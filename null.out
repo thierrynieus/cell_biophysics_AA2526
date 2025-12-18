@@ -1,5 +1,5 @@
 /home/tnieus/Documents/teaching/AA 2025-2026/Cell Biophysics/lezioni/cell_biophysics_AA2526
-Mod files: "./Grc_sine.mod" "./leak.mod" "./potassium.mod" "./ramp.mod" "./sodium.mod"
+Mod files: "./Ampa.mod" "./Ampa_ver2.mod" "./GABA.mod" "./Grc_sine.mod" "./leak.mod" "./potassium.mod" "./Pregen.mod" "./ramp.mod" "./sodium.mod"
 
  -> [32mCompiling[0m mod_func.cpp
  => [32mLINKING[0m shared library ./libnrnmech.so
